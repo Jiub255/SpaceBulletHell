@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://chqald5diaklw"]
+
+[ext_resource type="PackedScene" uid="uid://bhp5i4atn8uju" path="res://guns/bullets/bullet.tscn" id="1_f3dis"]
+[ext_resource type="Script" uid="uid://c41mw7gietly8" path="res://enemies/enemy_data.gd" id="1_n106o"]
+
+[resource]
+script = ExtResource("1_n106o")
+max_health = 5
+speed = 150
+bullet_scene = ExtResource("1_f3dis")
+time_between_shots = 1.0
+collision_damage = 5
+credits = 1
+metadata/_custom_type_script = "uid://c41mw7gietly8"

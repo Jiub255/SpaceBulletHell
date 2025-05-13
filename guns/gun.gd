@@ -23,8 +23,9 @@ func _setup_gun(gun_data : GunData):
 
 
 func _shoot():
-	print(f'shoot, rotation: {rad_to_deg(global_rotation)}')
+	#print(f'shoot, rotation: {rad_to_deg(global_rotation)}')
 	var bullet : Bullet = _data.bullet_scene.instantiate() as Bullet
-	get_tree().root.get_child(0).get_child(0).add_child(bullet)
+	get_tree().root.get_child(0).add_child(bullet)
+	bullet.collision_mask = 0b10
 	bullet.global_position = global_position
 	bullet.launch(global_rotation)

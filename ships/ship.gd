@@ -2,6 +2,7 @@ class_name Ship
 extends CharacterBody2D
 
 
+var _health : int = 20
 var _speed : int = 400
 var _rotation_speed : int = 15
 var _guns : Array[Gun] = []
@@ -17,6 +18,16 @@ func _process(delta : float) -> void:
 	_move()
 	_rotate(delta)
 	_handle_weapons(delta)
+
+
+func get_hit(damage : int) -> void:
+	_health -= damage
+	if _health <= 0:
+		_die()
+
+
+func _die():
+	print('died')
 
 
 func _move() -> void:

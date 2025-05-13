@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://hxv188dpl3jg"]
+
+[ext_resource type="PackedScene" uid="uid://cebwh7nvv8wpm" path="res://guns/bullets/bullet2.tscn" id="1_mpih3"]
+[ext_resource type="Script" uid="uid://c41mw7gietly8" path="res://enemies/enemy_data.gd" id="2_j1y4m"]
+
+[resource]
+script = ExtResource("2_j1y4m")
+max_health = 8
+speed = 100
+bullet_scene = ExtResource("1_mpih3")
+time_between_shots = 2.0
+collision_damage = 10
+credits = 3
+metadata/_custom_type_script = "uid://c41mw7gietly8"

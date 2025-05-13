@@ -5,6 +5,7 @@ extends Resource
 @export var damage : int = 1
 @export var speed : int = 333
 @export var sprite : Texture2D
+# TODO: Implement knockback.
 
 var size : float:
     get:
