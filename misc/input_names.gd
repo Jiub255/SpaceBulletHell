@@ -1,0 +1,10 @@
+class_name InputNames
+
+
+static var UP : String = 'up'
+static var DOWN : String = 'down'
+static var LEFT : String = 'left'
+static var RIGHT : String = 'right'
+static var WEAPON_1 : String = 'weapon1'
+static var WEAPON_2 : String = 'weapon2'
+static var WEAPON_3 : String = 'weapon3'

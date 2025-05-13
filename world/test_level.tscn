@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://0pm2pyqjpac1"]
+
+[ext_resource type="Texture2D" uid="uid://mk67dygrf8hd" path="res://misc/square-512.png" id="1_434qw"]
+[ext_resource type="PackedScene" uid="uid://cd6m1x1hkb5ab" path="res://ships/ship.tscn" id="2_kfa7i"]
+[ext_resource type="PackedScene" uid="uid://givajlh4nsgg" path="res://enemies/test_enemy.tscn" id="3_x27he"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(960, 540)
+scale = Vector2(3.75, 2.10938)
+texture = ExtResource("1_434qw")
+
+[node name="Ship" parent="." instance=ExtResource("2_kfa7i")]
+position = Vector2(960, 891)
+
+[node name="TestEnemy" parent="." instance=ExtResource("3_x27he")]
+position = Vector2(960, 260)

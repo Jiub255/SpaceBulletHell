@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd6m1x1hkb5ab"]
+
+[ext_resource type="Texture2D" uid="uid://yy5axo2o7x1h" path="res://ships/ship_body_1.png" id="1_l3rv8"]
+[ext_resource type="Script" uid="uid://dna6udlg6j663" path="res://ships/ship.gd" id="1_v4325"]
+[ext_resource type="Texture2D" uid="uid://dpx45rtlvv84g" path="res://misc/icon.svg" id="2_4cq66"]
+[ext_resource type="PackedScene" uid="uid://cm6wfdm57pafu" path="res://guns/gun.tscn" id="4_c3vuw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cq66"]
+radius = 26.75
+
+[node name="Ship" type="CharacterBody2D"]
+script = ExtResource("1_v4325")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4cq66")
+debug_color = Color(0.722486, 0.311817, 0.584924, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l3rv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, -19.37)
+scale = Vector2(0.095, 0.095)
+texture = ExtResource("2_4cq66")
+
+[node name="Guns" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="GunSlotN" type="Node2D" parent="Guns"]
+position = Vector2(0, -27)
+
+[node name="Gun" parent="Guns/GunSlotN" instance=ExtResource("4_c3vuw")]
+
+[node name="GunSlotS" type="Node2D" parent="Guns"]
+position = Vector2(0, 27)
+rotation = 3.14159
+
+[node name="GunSlotE" type="Node2D" parent="Guns"]
+position = Vector2(27, 0)
+rotation = 1.5708
+
+[node name="GunSlotW" type="Node2D" parent="Guns"]
+position = Vector2(-27, 0)
+rotation = -1.5708
