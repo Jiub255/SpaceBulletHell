@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=3 format=3 uid="uid://f78iqbscq5i2"]
+
+[ext_resource type="Script" uid="uid://pbvdu46dulau" path="res://guns/bullets/bullet_data.gd" id="1_f5mby"]
+[ext_resource type="Texture2D" uid="uid://bkrkpksc6naf3" path="res://guns/bullets/bullet_3x3.png" id="2_ch515"]
+
+[resource]
+script = ExtResource("1_f5mby")
+damage = 1
+speed = 333
+sprite = ExtResource("2_ch515")
+metadata/_custom_type_script = "uid://pbvdu46dulau"

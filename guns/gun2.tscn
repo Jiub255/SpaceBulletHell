@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtlkqwdp8805y"]
+
+[ext_resource type="Script" uid="uid://du3qdnjybik5h" path="res://guns/gun.gd" id="1_r0gih"]
+[ext_resource type="Resource" uid="uid://b7txbhppixjlx" path="res://guns/test_gun_data_2.tres" id="2_r0gih"]
+
+[node name="Gun2" type="Sprite2D"]
+z_index = 2
+offset = Vector2(0, -32)
+script = ExtResource("1_r0gih")
+_data = ExtResource("2_r0gih")

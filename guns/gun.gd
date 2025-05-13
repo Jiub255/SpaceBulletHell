@@ -2,24 +2,29 @@ class_name Gun
 extends Sprite2D
 
 
-const _bullet_scene : PackedScene = preload(UIDs.BULLET)
-
+@export var _data : GunData
 var _timer : float = 0
-var _time_between_shots : float = 1
 
 
 func _ready() -> void:
-    _timer = _time_between_shots
+	_setup_gun(_data)
 
 
-func _process_gun(delta):
-    _timer -= delta
-    if _timer <= 0:
-        _timer = _time_between_shots
-        _shoot()
+func process_gun(delta):
+	_timer -= delta
+	if _timer <= 0:
+		_timer = _data.time_between_shots
+		_shoot()
+
+
+func _setup_gun(gun_data : GunData):
+	_timer = gun_data.time_between_shots
+	texture = gun_data.sprite
 
 
 func _shoot():
-    var bullet : Bullet = _bullet_scene.instantiate() as Bullet
-    add_child(bullet)
-    #bullet.position = Vector2.ZERO
+	print(f'shoot, rotation: {rad_to_deg(global_rotation)}')
+	var bullet : Bullet = _data.bullet_scene.instantiate() as Bullet
+	get_tree().root.get_child(0).get_child(0).add_child(bullet)
+	bullet.global_position = global_position
+	bullet.launch(global_rotation)

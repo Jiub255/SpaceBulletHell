@@ -8,6 +8,7 @@
 
 [node name="Background" type="Sprite2D" parent="."]
 self_modulate = Color(0, 0, 0, 1)
+z_index = -1
 position = Vector2(960, 540)
 scale = Vector2(3.75, 2.10938)
 texture = ExtResource("1_434qw")

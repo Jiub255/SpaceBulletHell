@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 
 var _speed : int = 400
+var _rotation_speed : int = 15
 var _guns : Array[Gun] = []
 
 
@@ -14,6 +15,7 @@ func _ready() -> void:
 
 func _process(delta : float) -> void:
 	_move()
+	_rotate(delta)
 	_handle_weapons(delta)
 
 
@@ -27,9 +29,13 @@ func _move() -> void:
 	move_and_slide()
 
 
+func _rotate(delta : float) -> void:
+	rotate(deg_to_rad(_rotation_speed) * delta)
+
+
 func _handle_weapons(delta : float) -> void:
 	for gun in _guns:
-		gun._process_gun(delta)
+		gun.process_gun(delta)
 
 	if Input.is_action_just_pressed(InputNames.WEAPON_1):
 		# TODO: Shoot special weapon #1

@@ -1,12 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm6wfdm57pafu"]
 
-[ext_resource type="Texture2D" uid="uid://d3ot3illqy8rj" path="res://guns/gun1.png" id="1_dk5gl"]
 [ext_resource type="Script" uid="uid://du3qdnjybik5h" path="res://guns/gun.gd" id="2_kw0bs"]
+[ext_resource type="Resource" uid="uid://d27ghejo6oky0" path="res://guns/test_gun_data.tres" id="2_rbtxg"]
 
 [node name="Gun" type="Sprite2D"]
-texture = ExtResource("1_dk5gl")
+z_index = 2
 offset = Vector2(0, -32)
 script = ExtResource("2_kw0bs")
-
-[node name="ExitPoint" type="Node2D" parent="."]
-position = Vector2(0, -58)
+_data = ExtResource("2_rbtxg")
