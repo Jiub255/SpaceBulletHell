@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShipData" load_steps=2 format=3 uid="uid://dm5064lkxfjyw"]
+
+[ext_resource type="Script" uid="uid://bquaufxy2dlcv" path="res://ships/ship_data.gd" id="1_31e53"]
+
+[resource]
+script = ExtResource("1_31e53")
+max_health = 20
+speed = 200
+rotation_speed = 45
+metadata/_custom_type_script = "uid://bquaufxy2dlcv"

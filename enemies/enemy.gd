@@ -2,7 +2,7 @@ class_name Enemy
 extends Area2D
 
 
-signal enemy_died(credits : int)
+signal enemy_died(parts : int)
 
 @export var _data : EnemyData
 var _health : int
@@ -61,5 +61,5 @@ func _move(delta : float) -> void:
 
 func _die() -> void:
 	# TODO: Blowup animation/shader
-	enemy_died.emit(_data.credits)
+	enemy_died.emit(_data.parts)
 	queue_free()

@@ -17,11 +17,11 @@ func _physics_process(delta: float) -> void:
 	position += _direction * _data.speed * delta
 
 
-func launch(rotation_rads : float) -> void:
+func launch(rotation_rads : float) -> void: 
 	_direction = Vector2.UP.rotated(rotation_rads)
 
 
-func launch_dir(direction : Vector2):
+func launch_dir(direction : Vector2) -> void:
 	_direction = direction
 
 

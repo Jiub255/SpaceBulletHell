@@ -2,13 +2,15 @@ class_name Ship
 extends CharacterBody2D
 
 
-var _health : int = 20
-var _speed : int = 400
-var _rotation_speed : int = 15
+signal health_changed(int)
+
+@export var _data : ShipData
+var _health : int
 var _guns : Array[Gun] = []
 
 
 func _ready() -> void:
+	_health = _data.max_health
 	for gunslot in $Guns.get_children():
 		if gunslot.get_child_count() > 0:
 			_guns.append(gunslot.get_child(0))
@@ -22,12 +24,17 @@ func _process(delta : float) -> void:
 
 func get_hit(damage : int) -> void:
 	_health -= damage
+	health_changed.emit(max(0, _health))
 	if _health <= 0:
 		_die()
 
 
-func _die():
+func _die() -> void:
 	print('died')
+
+
+func get_health():
+	return _health
 
 
 func _move() -> void:
@@ -36,12 +43,12 @@ func _move() -> void:
 		InputNames.RIGHT,
 		InputNames.UP,
 		InputNames.DOWN)
-	velocity = direction * _speed
+	velocity = direction * _data.speed
 	move_and_slide()
 
 
 func _rotate(delta : float) -> void:
-	rotate(deg_to_rad(_rotation_speed) * delta)
+	rotate(deg_to_rad(_data.rotation_speed) * delta)
 
 
 func _handle_weapons(delta : float) -> void:

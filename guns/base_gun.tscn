@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvrgod08ok3sk"]
+
+[ext_resource type="Script" uid="uid://du3qdnjybik5h" path="res://guns/gun.gd" id="1_6g7f6"]
+
+[node name="Gun" type="Sprite2D"]
+z_index = 2
+offset = Vector2(0, -32)
+script = ExtResource("1_6g7f6")

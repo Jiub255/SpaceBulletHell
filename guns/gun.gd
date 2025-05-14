@@ -10,19 +10,19 @@ func _ready() -> void:
 	_setup_gun(_data)
 
 
-func process_gun(delta):
+func process_gun(delta) -> void:
 	_timer -= delta
 	if _timer <= 0:
 		_timer = _data.time_between_shots
 		_shoot()
 
 
-func _setup_gun(gun_data : GunData):
+func _setup_gun(gun_data : GunData) -> void:
 	_timer = gun_data.time_between_shots
 	texture = gun_data.sprite
 
 
-func _shoot():
+func _shoot() -> void:
 	#print(f'shoot, rotation: {rad_to_deg(global_rotation)}')
 	var bullet : Bullet = _data.bullet_scene.instantiate() as Bullet
 	get_tree().root.get_child(0).add_child(bullet)

@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_oefu8")
 damage = 3
-speed = 125
+speed = 350
 sprite = ExtResource("2_ky4lw")
 metadata/_custom_type_script = "uid://pbvdu46dulau"

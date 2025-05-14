@@ -1,0 +1,5 @@
+class_name Guns
+
+
+const GUN_1 : GunData = preload('uid://d27ghejo6oky0')
+const GUN_2 : GunData = preload('uid://b7txbhppixjlx')

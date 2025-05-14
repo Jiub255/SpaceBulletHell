@@ -7,17 +7,19 @@ const ENEMY_2 : PackedScene = preload(UIDs.ENEMY_2)
 const TIME_BETWEEN_SPAWNS : float = 3.0
 
 var player : Ship
-var credits : int
+var parts : int
 var _timer : float
 @onready var _hud = %HUD
 
 
-func _ready():
+func _ready() -> void:
 	player = load(UIDs.SHIP).instantiate()
 	add_child(player)
 	player.position = Vector2(890, 540)
+	player.health_changed.connect(set_health)
+	set_health(player.get_health())
 	_timer = TIME_BETWEEN_SPAWNS
-	_hud.set_credits(credits)
+	_hud.set_parts(parts)
 
 
 func _physics_process(delta: float) -> void:
@@ -27,12 +29,12 @@ func _physics_process(delta: float) -> void:
 		spawn_enemy()
 
 
-func add_credits(amount : int):
-	credits += amount
-	_hud.set_credits(credits)
+func add_parts(amount : int) -> void:
+	parts += amount
+	_hud.set_parts(parts)
 
 
-func spawn_enemy():
+func spawn_enemy() -> void:
 	var rando = randi() % 2
 	var enemy
 	if rando == 0:
@@ -42,4 +44,8 @@ func spawn_enemy():
 	add_child(enemy)
 	enemy.position.y -= 600
 	enemy.setup(player)
-	enemy.enemy_died.connect(add_credits)
+	enemy.enemy_died.connect(add_parts)
+
+
+func set_health(health : int):
+	_hud.set_health(health)

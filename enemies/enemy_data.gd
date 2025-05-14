@@ -7,4 +7,4 @@ extends Resource
 @export var bullet_scene : PackedScene
 @export var time_between_shots : float = 1.0
 @export var collision_damage : int = 5
-@export var credits : int = 1 # Credits are the game's currency, sci-fi style.
+@export var parts : int = 1 # Credits are the game's currency, sci-fi style.
