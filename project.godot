@@ -13,7 +13,7 @@ config_version=5
 config/name="SpaceBulletHell"
 run/main_scene="uid://0pm2pyqjpac1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://misc/icon.svg"
+config/icon="res://art/icon.svg"
 
 [display]
 
@@ -24,16 +24,27 @@ window/size/viewport_height=1080
 
 project/assembly_name="SpaceBulletHell"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
-"res://enemies/": "red",
-"res://guns/": "orange",
-"res://misc/": "yellow",
-"res://ships/": "green",
+"res://addons/": "pink",
+"res://art/": "red",
+"res://enemies/": "orange",
+"res://guns/": "yellow",
+"res://misc/": "green",
+"res://ships/": "teal",
 "res://ui/": "blue",
 "res://world/": "purple"
 }
+
+[gui]
+
+theme/custom="uid://b1m02y8waiywx"
+theme/custom_font="uid://c65tv5pvsd6y7"
 
 [input]
 
@@ -81,6 +92,10 @@ weapon3={
 
 2d_physics/layer_1="player"
 2d_physics/layer_2="enemy"
+
+[physics]
+
+2d/default_gravity=0.0
 
 [rendering]
 

@@ -8,7 +8,6 @@
 radius = 30.72
 
 [node name="TestEnemy" type="Area2D"]
-position = Vector2(0, -1)
 collision_layer = 2
 script = ExtResource("1_yikbh")
 _data = ExtResource("2_8ifd5")

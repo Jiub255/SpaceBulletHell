@@ -1,8 +1,8 @@
 class_name UIDs
 
 
-const BULLET = 'uid://bhp5i4atn8uju'
+const BULLET = 'uid://pssft0nyts2l'
 const ENEMY_1 = 'uid://givajlh4nsgg'
 const ENEMY_2 = 'uid://cphrmtlsjp5tj'
 const SHIP = 'uid://cd6m1x1hkb5ab'
-const BASE_GUN = 'uid://dvrgod08ok3sk'
+const GUN = 'uid://dvrgod08ok3sk'

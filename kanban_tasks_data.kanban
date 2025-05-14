@@ -1,0 +1,102 @@
+{
+	"categories": [
+		{
+			"uuid": "58bafeb0-f46f-4166-89fc-cff314596f69",
+			"title": "Task",
+			"color": "5a8838"
+		},
+		{
+			"uuid": "111c1916-6535-43f7-a99e-1934243f38a2",
+			"title": "Bug",
+			"color": "bd1111"
+		},
+		{
+			"uuid": "08876025-ce87-4598-a85d-369aa2cbd618",
+			"title": "Idea",
+			"color": "21d2c9"
+		},
+		{
+			"uuid": "39a5ebcb-9eb6-4e98-9ec9-4bef4af505fa",
+			"title": "Improvement",
+			"color": "e0e20f"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "84c8c9cf-6101-411e-a8e7-93a7d2a47057",
+			"title": "NOTES",
+			"tasks": [
+				"377de575-b68e-43e7-8a09-d09bc8dd1a2c"
+			]
+		},
+		{
+			"uuid": "bf7d8074-6b28-48c0-a3b3-cdcb52f36b58",
+			"title": "TODO",
+			"tasks": [
+				"82a3a435-d0c1-48f1-8b21-a9384dd82883",
+				"9e257927-9f90-42bc-8afc-ac22bccc8f7c"
+			]
+		},
+		{
+			"uuid": "b3422276-3023-48e9-928c-d6b93dab5766",
+			"title": "DOING",
+			"tasks": []
+		},
+		{
+			"uuid": "69ef67d8-1a29-4141-9cd8-841504385477",
+			"title": "BUGS",
+			"tasks": []
+		},
+		{
+			"uuid": "4aa3b2fa-90de-44de-8254-12f71974aabc",
+			"title": "DONE",
+			"tasks": []
+		},
+		{
+			"uuid": "0b550e3e-8e66-4fce-b495-bab3cb534897",
+			"title": "FIXED BUGS",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "82a3a435-d0c1-48f1-8b21-a9384dd82883",
+			"title": "Make build/attach menus",
+			"description": "Should building take a small time to wait? Or be instant?\nHealing too, maybe have it slowly fill?\nBuild menu only shows what weapons you have blueprints for.\nAttach menu shows what weapons you have built, and a diagram of the ship with its current weapons attached.\n\tCould do a simple drag and drop style.\n\tMaybe double click to unequip too?\nCan build new ships at planets\n\tCan also heal\n\tAnd buy blueprints\n\tSell weapons?",
+			"category": "58bafeb0-f46f-4166-89fc-cff314596f69",
+			"steps": []
+		},
+		{
+			"uuid": "377de575-b68e-43e7-8a09-d09bc8dd1a2c",
+			"title": "Game Overview",
+			"description": "Play as an auto-shooting, auto-spinning spaceship. Only control movement and special weapons, regular weapons are on timers. \nGet parts from ships you destroy, use those parts to build new weapons in your ships weapon research lab.\nAttach, detach, and change position of any weapons you've built.\nGo to new planets or beat bosses to get blueprints for new weapons and/or ships.\nShips have a certain number and arrangement of weapon slots, and a max health, spin speed, and movement speed. \nGuns shoot a certain ammo at a certain rate.\nEach ammo has a damage amount and a speed.\nEnemies have an ammo type, max health, speed, fire rate, collision damage, and parts rewarded upon their death. \n\tGoing to make more unique enemy/weapon/ammo types eventually.\n\tMaybe have them drop little powerups/healing items occasionally?\n\tOr special items needed to make certain weapons?\nHave levels, or a timer, or just an open world?\n\tCould refill health at planets?\n\tCould use parts to heal too",
+			"category": "08876025-ce87-4598-a85d-369aa2cbd618",
+			"steps": []
+		},
+		{
+			"uuid": "9e257927-9f90-42bc-8afc-ac22bccc8f7c",
+			"title": "Where to keep player runtime data?",
+			"description": "parts, health?, guns, ships, current setup, etc.",
+			"category": "58bafeb0-f46f-4166-89fc-cff314596f69",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"84c8c9cf-6101-411e-a8e7-93a7d2a47057"
+			],
+			[
+				"bf7d8074-6b28-48c0-a3b3-cdcb52f36b58"
+			],
+			[
+				"b3422276-3023-48e9-928c-d6b93dab5766",
+				"69ef67d8-1a29-4141-9cd8-841504385477"
+			],
+			[
+				"4aa3b2fa-90de-44de-8254-12f71974aabc",
+				"0b550e3e-8e66-4fce-b495-bab3cb534897"
+			]
+		]
+	}
+}

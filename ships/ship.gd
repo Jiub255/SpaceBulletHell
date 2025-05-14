@@ -4,22 +4,38 @@ extends CharacterBody2D
 
 signal health_changed(int)
 
-@export var _data : ShipData
+var _data : ShipData
 var _health : int
 var _guns : Array[Gun] = []
+var _slots : Array[Node2D] = []
+var _gun_scene : PackedScene = load(UIDs.GUN)
 
 
 func _ready() -> void:
-	_health = _data.max_health
 	for gunslot in $Guns.get_children():
-		if gunslot.get_child_count() > 0:
-			_guns.append(gunslot.get_child(0))
+		if gunslot is Node2D:
+			_slots.append(gunslot)
 
 
-func _process(delta : float) -> void:
+func _physics_process(delta : float) -> void:
 	_move()
-	_rotate(delta)
 	_handle_weapons(delta)
+	_rotate(delta)
+
+
+func setup(ship_state : ShipState):
+	_data = ship_state.ship_data
+	_health = min(ship_state.health, ship_state.ship_data.max_health)
+	for i in range(len(ship_state.guns)):
+		# instantiate base gun
+		var gun = _gun_scene.instantiate() as Gun
+		# put gun as child of slot i
+		_slots[i].add_child(gun)
+		# setup gun with gun data from guns
+		gun.setup(ship_state.guns[i])
+		# add gun to array
+		_guns.append(gun)
+		print(f'Gun: {gun}')
 
 
 func get_hit(damage : int) -> void:
@@ -33,7 +49,7 @@ func _die() -> void:
 	print('died')
 
 
-func get_health():
+func get_health() -> int:
 	return _health
 
 

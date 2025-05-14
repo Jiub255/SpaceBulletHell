@@ -8,6 +8,7 @@ signal enemy_died(parts : int)
 var _health : int
 var _timer : float = 0
 var _player : Ship
+var _bullet_scene : PackedScene = preload(UIDs.BULLET)
 
 
 func _ready() -> void:
@@ -47,11 +48,12 @@ func _tick_shoot(delta : float) -> void:
 
 func _shoot() -> void:
 	#print(f'shoot, rotation: {rad_to_deg(global_rotation)}')
-	var bullet : Bullet = _data.bullet_scene.instantiate() as Bullet
+	var bullet : Bullet = _bullet_scene.instantiate() as Bullet
 	get_tree().root.get_child(0).add_child(bullet)
 	bullet.collision_mask = 0b1
 	bullet.global_position = global_position
-	bullet.launch_dir((_player.position - position).normalized())
+	bullet.setup(_data.bullet_data)
+	bullet.launch_dir((_player.position - position).normalized(), _data.projectile_speed)
 
 
 func _move(delta : float) -> void:

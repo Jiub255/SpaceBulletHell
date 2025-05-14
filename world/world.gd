@@ -2,13 +2,13 @@ class_name World
 extends Node2D
 
 
-const ENEMY_1 : PackedScene = preload(UIDs.ENEMY_1)
-const ENEMY_2 : PackedScene = preload(UIDs.ENEMY_2)
 const TIME_BETWEEN_SPAWNS : float = 3.0
 
 var player : Ship
 var parts : int
 var _timer : float
+var _enemy_1 : PackedScene = load(UIDs.ENEMY_1)
+var _enemy_2 : PackedScene = load(UIDs.ENEMY_2)
 @onready var _hud = %HUD
 
 
@@ -18,6 +18,11 @@ func _ready() -> void:
 	player.position = Vector2(890, 540)
 	player.health_changed.connect(set_health)
 	set_health(player.get_health())
+
+	# Test-starter ship for now
+	var state : ShipState = ShipState.new(Ships.SHIP_1, [Guns.GUN_1, Guns.GUN_2, Guns.GUN_3], 20)
+	player.setup(state)
+
 	_timer = TIME_BETWEEN_SPAWNS
 	_hud.set_parts(parts)
 
@@ -38,11 +43,11 @@ func spawn_enemy() -> void:
 	var rando = randi() % 2
 	var enemy
 	if rando == 0:
-		enemy = ENEMY_1.instantiate()
+		enemy = _enemy_1.instantiate()
 	else:
-		enemy = ENEMY_2.instantiate()
+		enemy = _enemy_2.instantiate()
 	add_child(enemy)
-	enemy.position.y -= 600
+	enemy.position = Vector2(960, -150)
 	enemy.setup(player)
 	enemy.enemy_died.connect(add_parts)
 

@@ -1,11 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cd6m1x1hkb5ab"]
+[gd_scene load_steps=5 format=3 uid="uid://cd6m1x1hkb5ab"]
 
 [ext_resource type="Texture2D" uid="uid://yy5axo2o7x1h" path="res://ships/ship_body_1.png" id="1_l3rv8"]
 [ext_resource type="Script" uid="uid://dna6udlg6j663" path="res://ships/ship.gd" id="1_v4325"]
-[ext_resource type="Resource" uid="uid://dm5064lkxfjyw" path="res://ships/test_ship_data.tres" id="2_3kyw2"]
-[ext_resource type="Texture2D" uid="uid://dpx45rtlvv84g" path="res://misc/icon.svg" id="2_4cq66"]
-[ext_resource type="PackedScene" uid="uid://cm6wfdm57pafu" path="res://guns/gun.tscn" id="4_c3vuw"]
-[ext_resource type="PackedScene" uid="uid://dtlkqwdp8805y" path="res://guns/gun2.tscn" id="5_y11bb"]
+[ext_resource type="Texture2D" uid="uid://dpx45rtlvv84g" path="res://art/icon.svg" id="2_4cq66"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4cq66"]
 radius = 26.75
@@ -13,7 +10,6 @@ radius = 26.75
 [node name="Ship" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_v4325")
-_data = ExtResource("2_3kyw2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4cq66")
@@ -33,13 +29,9 @@ unique_name_in_owner = true
 [node name="GunSlotN" type="Node2D" parent="Guns"]
 position = Vector2(0, -27)
 
-[node name="Gun" parent="Guns/GunSlotN" instance=ExtResource("4_c3vuw")]
-
 [node name="GunSlotS" type="Node2D" parent="Guns"]
 position = Vector2(0, 27)
 rotation = 3.14159
-
-[node name="Gun2" parent="Guns/GunSlotS" instance=ExtResource("5_y11bb")]
 
 [node name="GunSlotE" type="Node2D" parent="Guns"]
 position = Vector2(27, 0)
