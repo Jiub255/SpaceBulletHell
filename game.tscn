@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwh4deedfhiiu"]
+
+[ext_resource type="Script" uid="uid://l8xgksxrc0o0" path="res://ui/ui_manager.gd" id="1_fc0e3"]
+[ext_resource type="Script" uid="uid://cjcclyq1r23nb" path="res://game.gd" id="1_ryrav"]
+[ext_resource type="PackedScene" uid="uid://biekwq50eo1ry" path="res://ui/hud.tscn" id="2_7jktm"]
+[ext_resource type="PackedScene" uid="uid://htp56jaaqu20" path="res://ui/game_menu.tscn" id="3_ryrav"]
+[ext_resource type="PackedScene" uid="uid://cn0xirsr4ca6n" path="res://ui/ship_menu.tscn" id="4_eow3j"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_ryrav")
+
+[node name="UiManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_fc0e3")
+
+[node name="HUD" parent="UiManager" instance=ExtResource("2_7jktm")]
+unique_name_in_owner = true
+
+[node name="GameMenu" parent="UiManager" instance=ExtResource("3_ryrav")]
+unique_name_in_owner = true
+
+[node name="ShipMenu" parent="UiManager" instance=ExtResource("4_eow3j")]
+unique_name_in_owner = true
+visible = false

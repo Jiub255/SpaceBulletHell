@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cig3yadr0ol7x"]
-
-[ext_resource type="Script" uid="uid://ovkqbmxm245w" path="res://misc/test.gd" id="1_3ln47"]
-[ext_resource type="PackedScene" uid="uid://bhp5i4atn8uju" path="res://guns/bullets/bullet.tscn" id="2_bbu8k"]
-
-[node name="Test" type="Node2D"]
-script = ExtResource("1_3ln47")
-bullet_scene = ExtResource("2_bbu8k")

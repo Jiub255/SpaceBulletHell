@@ -8,7 +8,7 @@
 script = ExtResource("2_klkpw")
 bullet_data = ExtResource("1_xfinn")
 time_between_shots = 1.0
-projectile_speed = 700
+projectile_speed = 2000
 muzzle_height = 56
 sprite = ExtResource("3_qfab6")
 cost = 0

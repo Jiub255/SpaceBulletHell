@@ -62,6 +62,6 @@ func _move(delta : float) -> void:
 
 
 func _die() -> void:
-	# TODO: Blowup animation/shader
+	# TODO: Blowup animation/shader/particle effects
 	enemy_died.emit(_data.parts)
 	queue_free()

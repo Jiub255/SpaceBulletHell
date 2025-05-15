@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_31e53")
-max_health = 20
-speed = 200
-rotation_speed = 90
+max_health = 50
+speed = 255
+rotation_speed = 123
 metadata/_custom_type_script = "uid://bquaufxy2dlcv"

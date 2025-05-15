@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://yy5axo2o7x1h" path="res://ships/ship_body_1.png" id="1_l3rv8"]
 [ext_resource type="Script" uid="uid://dna6udlg6j663" path="res://ships/ship.gd" id="1_v4325"]
-[ext_resource type="Texture2D" uid="uid://dpx45rtlvv84g" path="res://art/icon.svg" id="2_4cq66"]
+[ext_resource type="Texture2D" uid="uid://dpx45rtlvv84g" path="res://artstyle/icon.svg" id="2_4cq66"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4cq66"]
 radius = 26.75

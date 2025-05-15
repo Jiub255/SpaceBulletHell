@@ -26,7 +26,10 @@
 			"uuid": "84c8c9cf-6101-411e-a8e7-93a7d2a47057",
 			"title": "NOTES",
 			"tasks": [
-				"377de575-b68e-43e7-8a09-d09bc8dd1a2c"
+				"377de575-b68e-43e7-8a09-d09bc8dd1a2c",
+				"f2460209-5532-4cc3-8f00-6ce57fb15a97",
+				"32ce9485-52c5-4a2d-a64f-f92e18f41d75",
+				"7ea6825b-eb69-4829-aaa1-93dc4c9114fc"
 			]
 		},
 		{
@@ -34,13 +37,16 @@
 			"title": "TODO",
 			"tasks": [
 				"82a3a435-d0c1-48f1-8b21-a9384dd82883",
-				"9e257927-9f90-42bc-8afc-ac22bccc8f7c"
+				"9e257927-9f90-42bc-8afc-ac22bccc8f7c",
+				"6bc216e6-daa5-42b5-9d37-23b900b87621"
 			]
 		},
 		{
 			"uuid": "b3422276-3023-48e9-928c-d6b93dab5766",
 			"title": "DOING",
-			"tasks": []
+			"tasks": [
+				"e0a1d2d3-1dc6-474f-b34a-c0cab0404704"
+			]
 		},
 		{
 			"uuid": "69ef67d8-1a29-4141-9cd8-841504385477",
@@ -78,6 +84,41 @@
 			"title": "Where to keep player runtime data?",
 			"description": "parts, health?, guns, ships, current setup, etc.",
 			"category": "58bafeb0-f46f-4166-89fc-cff314596f69",
+			"steps": []
+		},
+		{
+			"uuid": "e0a1d2d3-1dc6-474f-b34a-c0cab0404704",
+			"title": "Game menu",
+			"description": "New game, save, load, and quit.\nOnly have new game kinda working for now. Makes duplicate players if clicked during gameplay.",
+			"category": "58bafeb0-f46f-4166-89fc-cff314596f69",
+			"steps": []
+		},
+		{
+			"uuid": "f2460209-5532-4cc3-8f00-6ce57fb15a97",
+			"title": "Levels",
+			"description": "Linear or open map?\nEach level like a 'biome'. Different general look, enemies, other random special things, etc.\nPlanets are the endings of the levels.\nYour ship can build new weapons and equip them any time in space.\nCan only build new ships and change ships at a planet.\nCould do an open world/endless mode with random planets scattered about. Do this later.",
+			"category": "08876025-ce87-4598-a85d-369aa2cbd618",
+			"steps": []
+		},
+		{
+			"uuid": "32ce9485-52c5-4a2d-a64f-f92e18f41d75",
+			"title": "Look",
+			"description": "Random white stars background, maybe random small planets or bigger/closer stars or asteroid belts. Space stuff.\nAll bullets different colors (not white though)\nCheesy scifi font and simple ui",
+			"category": "08876025-ce87-4598-a85d-369aa2cbd618",
+			"steps": []
+		},
+		{
+			"uuid": "7ea6825b-eb69-4829-aaa1-93dc4c9114fc",
+			"title": "Movement",
+			"description": "Screen advances automatically and you control your ship within the screen?\nOR\nCamera stays centered on you, but you can move full 2d?\n\nMaybe start with the first, then do the second for 'endless mode'.",
+			"category": "08876025-ce87-4598-a85d-369aa2cbd618",
+			"steps": []
+		},
+		{
+			"uuid": "6bc216e6-daa5-42b5-9d37-23b900b87621",
+			"title": "Secret menus",
+			"description": "Have a secret menu like MKIII. up up down down left right A B A while on the main menu unlocks the secret menu.\nSecret menu has all the fun cheats:\n\tInvincible\n\tInfinite special ammo\n\tInfinite parts\n\tSuper speed?\n\tChoose your music?\n\tetc.",
+			"category": "08876025-ce87-4598-a85d-369aa2cbd618",
 			"steps": []
 		}
 	],

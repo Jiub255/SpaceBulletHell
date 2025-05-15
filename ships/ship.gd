@@ -23,16 +23,16 @@ func _physics_process(delta : float) -> void:
 	_rotate(delta)
 
 
-func setup(ship_state : ShipState):
-	_data = ship_state.ship_data
-	_health = min(ship_state.health, ship_state.ship_data.max_health)
-	for i in range(len(ship_state.guns)):
+func setup(data: ShipData, state : ShipState) -> void:
+	_data = data
+	_health = min(state.health, data.max_health)
+	for i in range(len(state.guns)):
 		# instantiate base gun
 		var gun = _gun_scene.instantiate() as Gun
 		# put gun as child of slot i
 		_slots[i].add_child(gun)
 		# setup gun with gun data from guns
-		gun.setup(ship_state.guns[i])
+		gun.setup(state.guns[i])
 		# add gun to array
 		_guns.append(gun)
 		print(f'Gun: {gun}')
@@ -59,7 +59,7 @@ func _move() -> void:
 		InputNames.RIGHT,
 		InputNames.UP,
 		InputNames.DOWN)
-	velocity = direction * _data.speed
+	velocity = direction.normalized() * _data.speed
 	move_and_slide()
 
 
