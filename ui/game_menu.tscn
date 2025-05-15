@@ -73,6 +73,13 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 text = "Load Game"
 
+[node name="Secret" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "Secret"
+
 [node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 0)

@@ -37,16 +37,14 @@
 			"title": "TODO",
 			"tasks": [
 				"82a3a435-d0c1-48f1-8b21-a9384dd82883",
-				"9e257927-9f90-42bc-8afc-ac22bccc8f7c",
+				"e0a1d2d3-1dc6-474f-b34a-c0cab0404704",
 				"6bc216e6-daa5-42b5-9d37-23b900b87621"
 			]
 		},
 		{
 			"uuid": "b3422276-3023-48e9-928c-d6b93dab5766",
 			"title": "DOING",
-			"tasks": [
-				"e0a1d2d3-1dc6-474f-b34a-c0cab0404704"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "69ef67d8-1a29-4141-9cd8-841504385477",
@@ -56,7 +54,9 @@
 		{
 			"uuid": "4aa3b2fa-90de-44de-8254-12f71974aabc",
 			"title": "DONE",
-			"tasks": []
+			"tasks": [
+				"9e257927-9f90-42bc-8afc-ac22bccc8f7c"
+			]
 		},
 		{
 			"uuid": "0b550e3e-8e66-4fce-b495-bab3cb534897",
@@ -82,7 +82,7 @@
 		{
 			"uuid": "9e257927-9f90-42bc-8afc-ac22bccc8f7c",
 			"title": "Where to keep player runtime data?",
-			"description": "parts, health?, guns, ships, current setup, etc.",
+			"description": "parts, health?, guns, ships, current setup, etc.\nKeeping it in GameState class.",
 			"category": "58bafeb0-f46f-4166-89fc-cff314596f69",
 			"steps": []
 		},

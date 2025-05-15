@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Cheat" load_steps=2 format=3 uid="uid://bdpmyu8x8blm3"]
+
+[ext_resource type="Script" uid="uid://bcuxe8mxyxik0" path="res://misc/cheats/cheat.gd" id="1_kvnl8"]
+
+[resource]
+script = ExtResource("1_kvnl8")
+_effect = 1
+_code = Array[int]([70, 68, 84])
+metadata/_custom_type_script = "uid://bcuxe8mxyxik0"
