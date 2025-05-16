@@ -15,6 +15,10 @@ run/main_scene="uid://dwh4deedfhiiu"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://artstyle/icon.svg"
 
+[autoload]
+
+CheatChecker="*res://misc/cheats/cheat_checker.gd"
+
 [display]
 
 window/size/viewport_width=1920

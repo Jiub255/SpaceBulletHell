@@ -1,16 +1,26 @@
 class_name Cheat
 extends Resource
-# TODO: Add timeout. Run process from whatever instantiates checker, through each of its cheats.
 
 
-signal activated(effect : Enums.CheatEffect)
+signal activated(effect : CheatChecker.Effect)
 
-@export var _effect : Enums.CheatEffect
+const TIME_TO_TIMEOUT : float = 1.5
+
+@export var _effect : CheatChecker.Effect
 @export var _code : Array[Key]
 var _heads : Array[int]
+var _timer : float = 0.0
 
 
-func check(key : Key):
+func tick(delta : float) -> void:
+	_timer += delta
+
+
+func check(key : Key) -> void:
+	if _timer > TIME_TO_TIMEOUT:
+		_heads = []
+		#print(f'Timeout, resetting heads: {_heads}')
+	_timer = 0.0
 	# Start a new head at 0 each check.
 	_heads.append(0)
 	# Iterating backwards because of potential array deletions.
@@ -24,13 +34,13 @@ func check(key : Key):
 	#print(f'head count: {len(_heads)}')
 
 
-func _advance_head(head_index : int):
+func _advance_head(head_index : int) -> void:
 	_heads[head_index] += 1
 	if _heads[head_index] == len(_code):
 		_reset_head(head_index)
 		activated.emit(_effect)
-		#print(f'Cheat activated: {_effect}')
+		#print(f'Cheat activated: {CheatChecker.Effect.keys()[_effect]}')
 
 
-func _reset_head(head_index : int):
+func _reset_head(head_index : int) -> void:
 	_heads.remove_at(head_index)
