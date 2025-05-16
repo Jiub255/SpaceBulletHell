@@ -14,8 +14,8 @@ func _ready() -> void:
 
 func _start_new_game() -> void:
     _game_state = GameState.new()
-    _game_state.parts_changed.connect(_ui.hud.set_parts)
     # TODO: Instantiate/Setup level
+    _ui.setup(_game_state)
     _level = _level_scene.instantiate() as Level
     add_child(_level)
     _level.health_changed.connect(_ui.hud.set_health)

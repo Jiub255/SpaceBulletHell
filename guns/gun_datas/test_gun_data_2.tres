@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GunData" load_steps=4 format=3 uid="uid://b7txbhppixjlx"]
+
+[ext_resource type="Resource" uid="uid://f78iqbscq5i2" path="res://guns/bullets/bullet_datas/test_bullet_data_1.tres" id="1_ph4yk"]
+[ext_resource type="Texture2D" uid="uid://djdd2jkbc5lpr" path="res://guns/gun2.png" id="2_gyecf"]
+[ext_resource type="Script" uid="uid://c65qcgp4vtxho" path="res://guns/gun_data.gd" id="3_2bv18"]
+
+[resource]
+script = ExtResource("3_2bv18")
+name = "Glun"
+bullet_data = ExtResource("1_ph4yk")
+time_between_shots = 0.333
+projectile_speed = 1000
+muzzle_height = 12
+icon = ExtResource("2_gyecf")
+cost = 30
+description = "las vie vslnd viasd vlawrneba;li fdaosdcv awoi eaw;sij ef;alsd vja;sij dvaosijd va;osie v"
+metadata/_custom_type_script = "uid://c65qcgp4vtxho"

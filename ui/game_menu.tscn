@@ -73,12 +73,26 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 text = "Load Game"
 
-[node name="Secret" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="KoolStuff" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-text = "Secret"
+text = "Kool Stuff"
+
+[node name="KoolerStuff" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "Kooler Stuff"
+
+[node name="ScottsStuff" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "Scotts Stuff"
 
 [node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true

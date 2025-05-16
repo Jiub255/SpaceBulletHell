@@ -4,13 +4,15 @@ extends Sprite2D
 
 @export var _data : GunData
 var _timer : float = 0
+var _tree : SceneTree
 var _bullet_scene : PackedScene = load(UIDs.BULLET)
 
 
 func setup(gun_data : GunData) -> void:
 	_data = gun_data
 	_timer = gun_data.time_between_shots
-	texture = gun_data.sprite
+	_tree = get_tree()
+	texture = gun_data.icon
 
 
 func process_gun(delta) -> void:
@@ -23,7 +25,7 @@ func process_gun(delta) -> void:
 
 func _shoot() -> void:
 	var bullet = _bullet_scene.instantiate()
-	get_tree().current_scene.add_child(bullet)
+	_tree.current_scene.add_child(bullet)
 	bullet.collision_mask = 0b10
 	bullet.global_position = to_global(position + Vector2(0, -_data.muzzle_height))
 	bullet.setup(_data.bullet_data)

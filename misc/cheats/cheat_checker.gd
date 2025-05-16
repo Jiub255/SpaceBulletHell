@@ -3,22 +3,22 @@ extends Node
 signal cheat_activated(effect : Effect)
 
 enum Effect{
-	SECRET_MENU,
-	GATE,
-	JAMES,
+	KOOL_STUFF,
+	KOOLER_STUFF,
+	SCOTTS_STUFF,
 }
 
 var cheats : Array[Cheat]
 
 
 func _ready() -> void:
-	var secret_menu : Cheat = load('uid://c1c4n7g7jlr8d')
-	#var test_cheat_2 : Cheat = load('uid://bdpmyu8x8blm3')
-	#var test_cheat_3 : Cheat = load('uid://gd3oibfw20q')
+	var kool_stuff : Cheat = load('uid://c1c4n7g7jlr8d')
+	var kooler_stuff : Cheat = load('uid://bdpmyu8x8blm3')
+	var scotts_stuff : Cheat = load('uid://gd3oibfw20q')
 
-	cheats.append(secret_menu)
-	#cheats.append(test_cheat_2)
-	#cheats.append(test_cheat_3)
+	cheats.append(kool_stuff)
+	cheats.append(kooler_stuff)
+	cheats.append(scotts_stuff)
 
 	for cheat in cheats:
 		cheat.activated.connect(cheat_activated.emit)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GunData" load_steps=4 format=3 uid="uid://bnkersxoky0sg"]
+
+[ext_resource type="Resource" uid="uid://cto6iaco6u3x5" path="res://guns/bullets/bullet_datas/test_bullet_data_2.tres" id="1_qdoqn"]
+[ext_resource type="Texture2D" uid="uid://dxe5snaitlc5q" path="res://guns/gun3.png" id="2_8noa4"]
+[ext_resource type="Script" uid="uid://c65qcgp4vtxho" path="res://guns/gun_data.gd" id="3_iufhr"]
+
+[resource]
+script = ExtResource("3_iufhr")
+name = "Squn"
+bullet_data = ExtResource("1_qdoqn")
+time_between_shots = 1.0
+projectile_speed = 2000
+muzzle_height = 56
+icon = ExtResource("2_8noa4")
+cost = 150
+description = "Big glunb"
+metadata/_custom_type_script = "uid://c65qcgp4vtxho"

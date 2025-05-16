@@ -36,15 +36,17 @@
 			"uuid": "bf7d8074-6b28-48c0-a3b3-cdcb52f36b58",
 			"title": "TODO",
 			"tasks": [
-				"82a3a435-d0c1-48f1-8b21-a9384dd82883",
 				"e0a1d2d3-1dc6-474f-b34a-c0cab0404704",
-				"6bc216e6-daa5-42b5-9d37-23b900b87621"
+				"6bc216e6-daa5-42b5-9d37-23b900b87621",
+				"41ca5b12-2e30-4d06-b99f-3128b3c0bd83"
 			]
 		},
 		{
 			"uuid": "b3422276-3023-48e9-928c-d6b93dab5766",
 			"title": "DOING",
-			"tasks": []
+			"tasks": [
+				"82a3a435-d0c1-48f1-8b21-a9384dd82883"
+			]
 		},
 		{
 			"uuid": "69ef67d8-1a29-4141-9cd8-841504385477",
@@ -55,7 +57,8 @@
 			"uuid": "4aa3b2fa-90de-44de-8254-12f71974aabc",
 			"title": "DONE",
 			"tasks": [
-				"9e257927-9f90-42bc-8afc-ac22bccc8f7c"
+				"9e257927-9f90-42bc-8afc-ac22bccc8f7c",
+				"8888d5de-5fa2-4505-8f30-b23078bf387f"
 			]
 		},
 		{
@@ -68,7 +71,7 @@
 		{
 			"uuid": "82a3a435-d0c1-48f1-8b21-a9384dd82883",
 			"title": "Make build/attach menus",
-			"description": "Should building take a small time to wait? Or be instant?\nHealing too, maybe have it slowly fill?\nBuild menu only shows what weapons you have blueprints for.\nAttach menu shows what weapons you have built, and a diagram of the ship with its current weapons attached.\n\tCould do a simple drag and drop style.\n\tMaybe double click to unequip too?\nCan build new ships at planets\n\tCan also heal\n\tAnd buy blueprints\n\tSell weapons?",
+			"description": "Should building take a small time to wait? Or be instant?\nHealing too, maybe have it slowly fill?\nBuild menu only shows what weapons you have blueprints for.\nAttach menu shows what weapons you have built, and a diagram of the ship with its current weapons attached.\n\tCould do a simple drag and drop style.\n\tMaybe double click to unequip too?\nCan build new ships at planets\n\tCan also heal\n\tAnd buy blueprints\n\tSell weapons?\n\nBuild almost done, need to make equip menu next.",
 			"category": "58bafeb0-f46f-4166-89fc-cff314596f69",
 			"steps": []
 		},
@@ -119,6 +122,20 @@
 			"title": "Secret menus",
 			"description": "Have a secret menu like MKIII. up up down down left right A B A while on the main menu unlocks the secret menu.\nSecret menu has all the fun cheats:\n\tInvincible\n\tInfinite special ammo\n\tInfinite parts\n\tSuper speed?\n\tChoose your music?\n\tetc.",
 			"category": "08876025-ce87-4598-a85d-369aa2cbd618",
+			"steps": []
+		},
+		{
+			"uuid": "41ca5b12-2e30-4d06-b99f-3128b3c0bd83",
+			"title": "Corner Gun",
+			"description": "Obviously.\nBullet shoots forward, then sharply veers right/left?",
+			"category": "08876025-ce87-4598-a85d-369aa2cbd618",
+			"steps": []
+		},
+		{
+			"uuid": "8888d5de-5fa2-4505-8f30-b23078bf387f",
+			"title": "Cheat codes",
+			"description": "CheatChecker autoload with Cheat resources (arrays of keys)\nJust connect whatever script to the CheatChecker.activated(effect : CheatChecker.Effect) signal,\n\tthen respond however. ",
+			"category": "58bafeb0-f46f-4166-89fc-cff314596f69",
 			"steps": []
 		}
 	],

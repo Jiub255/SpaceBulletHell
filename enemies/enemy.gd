@@ -9,11 +9,13 @@ var _health : int
 var _timer : float = 0
 var _player : Ship
 var _bullet_scene : PackedScene = preload(UIDs.BULLET)
+var _tree : SceneTree
 
 
 func _ready() -> void:
 	_health = _data.max_health
 	_timer = _data.time_between_shots
+	_tree = get_tree()
 	body_entered.connect(_on_body_entered)
 
 
@@ -49,7 +51,7 @@ func _tick_shoot(delta : float) -> void:
 func _shoot() -> void:
 	#print(f'shoot, rotation: {rad_to_deg(global_rotation)}')
 	var bullet : Bullet = _bullet_scene.instantiate() as Bullet
-	get_tree().root.get_child(0).add_child(bullet)
+	_tree.current_scene.add_child(bullet)
 	bullet.collision_mask = 0b1
 	bullet.global_position = global_position
 	bullet.setup(_data.bullet_data)

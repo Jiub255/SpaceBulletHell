@@ -25,10 +25,11 @@ func start_level(game_state : GameState) -> void:
 	player = load(UIDs.SHIP).instantiate()
 	add_child(player)
 	player.position = Vector2(890, 540)
-	player.health_changed.connect(_set_health)
-	_set_health(player.get_health())
+	player.health_changed.connect(health_changed.emit)
+	health_changed.emit(player.get_health())
 	# Starting with first ship in list for now.
-	player.setup(_game_state.ship_infos[0].data, _game_state.ship_infos[0].state)
+	var ship_info = _game_state.ship_infos[_game_state.ship_index]
+	player.setup(ship_info.data, ship_info.state)
 	_timer = TIME_BETWEEN_SPAWNS
 
 
@@ -37,17 +38,13 @@ func add_parts(amount : int) -> void:
 
 
 func spawn_enemy() -> void:
-	var rando = randi() % 2
+	var rando = randi() % 5
 	var enemy
 	if rando == 0:
-		enemy = _enemy_1.instantiate()
+		enemy = _enemy_2.instantiate() # 1/5
 	else:
-		enemy = _enemy_2.instantiate()
+		enemy = _enemy_1.instantiate() # 4/5
 	add_child(enemy)
 	enemy.position = Vector2(960, -150)
 	enemy.setup(player)
 	enemy.enemy_died.connect(add_parts)
-
-
-func _set_health(health : int) -> void:
-	health_changed.emit(health)

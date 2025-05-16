@@ -27,15 +27,11 @@ func setup(data: ShipData, state : ShipState) -> void:
 	_data = data
 	_health = min(state.health, data.max_health)
 	for i in range(len(state.guns)):
-		# instantiate base gun
 		var gun = _gun_scene.instantiate() as Gun
-		# put gun as child of slot i
 		_slots[i].add_child(gun)
-		# setup gun with gun data from guns
 		gun.setup(state.guns[i])
-		# add gun to array
 		_guns.append(gun)
-		print(f'Gun: {gun}')
+		#print(f'Gun: {gun}')
 
 
 func get_hit(damage : int) -> void:
